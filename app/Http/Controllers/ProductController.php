@@ -8,7 +8,7 @@ class ProductController extends Controller
 {
     public function show(string $product_name)
     {
-        return view('product-detail',['product_name'=>$product_name]);
+        return view('product-show',['product_name'=>$product_name]);
 
     }
 }

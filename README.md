@@ -15,6 +15,7 @@ When project is cloned, you need to :
     ```
     php artisan migrate
     ```
+    then say **Yes** to create the database
 - Run :
     ```
     npm install && npm run build

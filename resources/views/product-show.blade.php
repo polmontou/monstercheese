@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts/app')
+@section('page_title',$product_name)
 
+<<<<<<<< HEAD:resources/views/product/product-detail.blade.php
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,9 @@
 </head>
 
 <body>
+========
+@section('content')
+>>>>>>>> 135f080 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
     <main>
         <section>
             <h1>{{$product_name}}</h1>
@@ -46,14 +50,18 @@
             </div>
         </section>
         <section>
-            <h2>Avis client</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra maximus augue.</p>
+
+            <x-customer-review/>
             <form>
                 <textarea></textarea>
                 <button>S'abonner</button>
             </form>
         </section>
     </main>
+<<<<<<<< HEAD:resources/views/product/product-detail.blade.php
 </body>
 
 </html>
+========
+@endsection
+>>>>>>>> 135f080 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php

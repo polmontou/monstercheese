@@ -1,6 +1,7 @@
 @extends('layouts/app')
 @section('page_title',$product_name)
 
+<<<<<<<< HEAD:resources/views/products/product-show.blade.php
 <<<<<<<< HEAD:resources/views/product/product-detail.blade.php
 <head>
     <meta charset="UTF-8">
@@ -12,6 +13,9 @@
 ========
 @section('content')
 >>>>>>>> 135f080 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
+========
+@section('content')
+>>>>>>>> 4db7f09 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
     <main>
         <section>
             <h1>{{$product_name}}</h1>
@@ -58,6 +62,7 @@
             </form>
         </section>
     </main>
+<<<<<<<< HEAD:resources/views/products/product-show.blade.php
 <<<<<<<< HEAD:resources/views/product/product-detail.blade.php
 </body>
 
@@ -65,3 +70,6 @@
 ========
 @endsection
 >>>>>>>> 135f080 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
+========
+@endsection
+>>>>>>>> 4db7f09 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php

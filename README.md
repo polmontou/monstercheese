@@ -1,9 +1,11 @@
 ## Initialization
 
 When project is cloned, you need to :
-- Create your database 
-- Copy ``.env.example`` in a ``.env`` file in root directory
-- Set your database in ``.env`` file
+- Copy ``.env.example`` in a ``.env`` file in root directory with :
+      ```
+      cp .env.example .env
+      ```
+- Set your **DB_USERNAME** and **DB_PASSWORD** in your ``.env`` file with your personal logs
 - At the beginnig of your ``.env`` you have to specify the **APP_KEY**, call me and I'll give it to you
 - Install all the dependencies with :
     ```

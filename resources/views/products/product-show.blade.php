@@ -1,11 +1,16 @@
+@extends('layouts/app')
+@section('page_title',$product_name)
 
-@extends('components/layout')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{$product_name}}</title>
+</head>
 
-@section('page_title', $product[0]->name)
-
-
+<body>
 
 @section('content')
+
     <main>
         {{var_dump($product[0]->name)}}
         <section>
@@ -60,3 +65,4 @@
 </html>
 
 @endsection
+

@@ -9,5 +9,4 @@ class CatalogController extends Controller {
         $products = DB::select('select * from products where available = 1');
         return view('products.catalog', ['products'=>$products]);
     }
-    
 }

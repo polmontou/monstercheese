@@ -1,24 +1,23 @@
 
-@extends('components.layout')
-
 @extends('components/layout')
-@section('page_title',$product_name)
 
+@section('page_title', $product[0]->name)
 
-@section('page_title', $product_name)
 
 
 @section('content')
     <main>
+        {{var_dump($product[0]->name)}}
         <section>
-            <h1>{{$product_name}}</h1>
-            <img src="/images/cheese.png" alt="Image Fromage">
+            <h1>{{$product[0]->name}}</h1>
+            <img src={{ asset($product[0]->picture) }} alt="Image {{$product[0]->name}}">
             <p>Prix au kg</p>
+            <p>{{$product[0]->price}} €</p>
             <div>
                 <p>Quantité</p>
                 <button>AJouter au panier</button>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra maximus augue. Vivamus venenatis odio quis ligula consequat, et imperdiet nisl dignissim. Donec eu orci aliquet, hendrerit metus ac, imperdiet nulla. Vivamus venenatis odio quis ligula consequat, et imperdiet nisl dignissim. Donec eu orci aliquet, hendrerit metus ac, imperdiet nulla. </p>
+            <p>{{$product[0]->description}}</p>
             <div>
                 <div>
                     <h1>Ingrédients</h1>
@@ -55,22 +54,9 @@
             </form>
         </section>
     </main>
-<<<<<<< HEAD
-<<<<<<<< HEAD:resources/views/products/product-show.blade.php
-<<<<<<<< HEAD:resources/views/products/product-show.blade.php
-<<<<<<<< HEAD:resources/views/product/product-detail.blade.php
+
 </body>
 
 </html>
-========
+
 @endsection
->>>>>>>> 135f080 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
-========
-@endsection
->>>>>>>> 4db7f09 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
-========
-@endsection
->>>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a:resources/views/product-show.blade.php
-=======
-@endsection
->>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a

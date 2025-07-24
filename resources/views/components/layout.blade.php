@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <link rel="icon" href={{ asset('images/favicon.png') }}>
+    <title>@yield('page_title')</title>
+    <link rel="stylesheet" href={{ asset('style.css') }}>
 </head>
 <body>
     <header>
-        <h1>Croûte et Créature</h1>
-        <nav>
-            <a href="{{ routes('../homepage') }}">Accueil</a>
-            <a href="{{ routes('../catalog') }}">Nos produits</a>
-        </nav>
+        <a href={{ url("/") }}>
+            <img src={{ asset('images/logo.png') }} alt="Logo Croûte & Créatures">
+        </a>
     </header>
-</body>
-</html>
+
+    @yield('content')
+
+    <footer>
+        <div class="footer__contact">
+            <h4 class="footer__contact--title">CONTACT</h4>
+            <div class="footer__contact--phone">06.66.66.66.63</div>
+            <div class="footer__contact--mail">contact@c&c.com</div>
+        </div>
+        <img src={{ asset('images/logo.png') }} alt="Logo Croûte & Créatures" class="footer__logo">
+    </footer>
+</body>    

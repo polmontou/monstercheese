@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     //
     public function show(){
-        return view('homepage');
+        return view('homepage', ['name_page'=>'Accueil']);
     }
     
 }

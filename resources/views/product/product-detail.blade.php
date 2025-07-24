@@ -8,7 +8,6 @@
 </head>
 
 <body>
-    @include('header')
     <main>
         <section>
             <h1>{{$product_name}}</h1>
@@ -55,7 +54,6 @@
             </form>
         </section>
     </main>
-    @include('footer')
 </body>
 
 </html>

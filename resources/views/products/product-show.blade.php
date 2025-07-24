@@ -1,7 +1,5 @@
-
 @extends('components/layout')
-
-@section('page_title', $product[0]->name)
+@section('page_title',$product_name)
 
 
 

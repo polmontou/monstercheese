@@ -12,6 +12,10 @@
         <a href={{ url("/") }}>
             <img src={{ asset('images/logo.png') }} alt="Logo Croûte & Créatures">
         </a>
+        <nav>
+            <a href="{{ url('/') }}">Accueil</a>
+            <a href="{{ url('/products') }}">Nos produits</a>
+        </nav>
     </header>
 
     @yield('content')

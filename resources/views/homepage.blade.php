@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage</title>
-</head>
-<body>
+@extends('components.layout')
+
+@section('page_title', 'Accueil')
+
+@section('content')
     <main>
         <div>
             <img src="{{asset('images/plateauFromage.jpeg')}}" alt="plateau de fromage">
@@ -26,10 +22,10 @@
             Pas de vaches, pas de chèvres… Ici, on trait du troll, on presse du gobelin, on affine du yéti. <br>
             Oui, oui, c’est du lait 100% monstre, riche en… euh… caractère.</p>
 
-            Notre secret ?   <br>
-            Des monstres bien nourris, une cave un peu hantée, et un savoir-faire qui sent fort… très fort.
+            <p>Notre secret ?   <br>
+            Des monstres bien nourris, une cave un peu hantée, et un savoir-faire qui sent fort… très fort.</p>
 
-    N       <p>Notre credo ?   <br>
+            <p>Notre credo ?   <br>
             Si ça ne bouge pas un peu tout seul, c’est pas mûr !</p>
         </div>    
         <div>
@@ -77,5 +73,4 @@
             <p>- Chantalito</p>
         </div>
     </main>
-</body>
-</html>
+    @endsection

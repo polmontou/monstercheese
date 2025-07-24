@@ -31,11 +31,15 @@ main {
     align-items: center;
 }
 
-h1{
+h1,h2,h3{
     padding: 2rem;
     font-size: 2rem;
     font-weight: bold;
-    color: #d6ad60
+    color: #d6ad60;
+}
+
+p{
+    color: white;
 }
 
 .catalogFeed__itemCard{

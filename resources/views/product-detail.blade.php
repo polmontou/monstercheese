@@ -1,4 +1,4 @@
-@extends('components.layout')
+@extends('components/layout')
 
 @section('page_title', $product_name)
 

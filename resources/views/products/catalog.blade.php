@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
-    <link rel="icon" type="image/x-icon" href={{ asset('images/favicon.png') }}>
-</head>
-<body>
-    @include('header')
+@extends('components.layout')
 
+@section('page_title', 'Catalogue')
+
+@section('content')
     <main>
         <h1>Nos produits</h1>
         <div class="catalogFeed">
@@ -37,8 +31,4 @@
             </div>
             <hr>
         </div>
-
-        @include('footer')
-    </main>
-</body>
-</html>
+@endsection

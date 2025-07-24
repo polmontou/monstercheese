@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-    public function show(string $product_name)
+    public function show(string $id)
     {
-        return view('products.product-show',['product_name'=>$product_name]);
+        $product = DB::select("select * from products where id = $id");
+        return view('products.product-show',['product'=>$product]);
 
     }
 }

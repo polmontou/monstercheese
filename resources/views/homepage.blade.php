@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage</title>
-</head>
-<body>
+@extends('components/layout')
+
+@section('page_title', 'Catalogue')
+
+@section('content')
     <main>
         <div>
             <img src="{{asset('images/plateauFromage.jpeg')}}" alt="plateau de fromage">
@@ -77,5 +73,4 @@
             <p>- Chantalito</p>
         </div>
     </main>
-</body>
-</html>
+@endsection

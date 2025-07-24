@@ -50,4 +50,23 @@
                 <button>S'abonner</button>
             </form>
         </section>
+    </main>
+<<<<<<< HEAD
+<<<<<<<< HEAD:resources/views/products/product-show.blade.php
+<<<<<<<< HEAD:resources/views/products/product-show.blade.php
+<<<<<<<< HEAD:resources/views/product/product-detail.blade.php
+</body>
+
+</html>
+========
 @endsection
+>>>>>>>> 135f080 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
+========
+@endsection
+>>>>>>>> 4db7f09 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
+========
+@endsection
+>>>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a:resources/views/product-show.blade.php
+=======
+@endsection
+>>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a

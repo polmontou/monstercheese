@@ -11,7 +11,10 @@
 <body>
     <header>
         <img src={{ asset('images/logo.png') }} alt="Logo Croûte & Créatures" width="300rem">
-        <a href=""></a>
+        <a href="{{url('homepage')}}">Homepage</a>
+        <a href="{{url('products')}}">Catalogue</a>
+        <a href="">Product</a>
+
     </header>
 
     @yield('content')

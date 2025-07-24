@@ -22,10 +22,10 @@
             Pas de vaches, pas de chèvres… Ici, on trait du troll, on presse du gobelin, on affine du yéti. <br>
             Oui, oui, c’est du lait 100% monstre, riche en… euh… caractère.</p>
 
-            <p>Notre secret ?   <br>
+            <p>Notre secret ? <br>
             Des monstres bien nourris, une cave un peu hantée, et un savoir-faire qui sent fort… très fort.</p>
 
-            <p>Notre credo ?   <br>
+            <p>Notre credo ?  <br>
             Si ça ne bouge pas un peu tout seul, c’est pas mûr !</p>
         </div>    
         <div>

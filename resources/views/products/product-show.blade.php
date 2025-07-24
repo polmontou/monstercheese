@@ -1,6 +1,8 @@
 @extends('layouts/app')
 @section('page_title',$product_name)
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:resources/views/products/product-show.blade.php
 <<<<<<<< HEAD:resources/views/products/product-show.blade.php
 <<<<<<<< HEAD:resources/views/product/product-detail.blade.php
 <head>
@@ -16,6 +18,12 @@
 ========
 @section('content')
 >>>>>>>> 4db7f09 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
+========
+@section('content')
+>>>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a:resources/views/product-show.blade.php
+=======
+@section('content')
+>>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a
     <main>
         <section>
             <h1>{{$product_name}}</h1>
@@ -62,6 +70,8 @@
             </form>
         </section>
     </main>
+<<<<<<< HEAD
+<<<<<<<< HEAD:resources/views/products/product-show.blade.php
 <<<<<<<< HEAD:resources/views/products/product-show.blade.php
 <<<<<<<< HEAD:resources/views/product/product-detail.blade.php
 </body>
@@ -73,3 +83,9 @@
 ========
 @endsection
 >>>>>>>> 4db7f09 (Refactor product display and add customer review component with layout updates):resources/views/product-show.blade.php
+========
+@endsection
+>>>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a:resources/views/product-show.blade.php
+=======
+@endsection
+>>>>>>> 761161a29374aa3c15d2b88b10919e2188ca1d9a

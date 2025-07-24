@@ -1,8 +1,6 @@
-@extends('components.layout')
-
+@extends('components/layout')
 
 @section('page_title', $product_name)
-
 
 @section('content')
     <main>
@@ -50,4 +48,4 @@
                 <button>S'abonner</button>
             </form>
         </section>
-@endsection
+    </main>

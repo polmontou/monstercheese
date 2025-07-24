@@ -55,6 +55,6 @@ p{
     font-weight: bold;
     font-size: 1rem;
 }
-.catalogFeed__itemCard__priceWeight, .catalogFeed__itemCard__opinion {
+.catalogFeed__itemCard__price, .catalogFeed__itemCard__weight, .catalogFeed__itemCard__opinion {
     color: #999999
 }

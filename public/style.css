@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: inherit;
+  color: inherit;
+  font: inherit;
+}
+
+header, footer {
+    margin: 0.2rem;
+    cursor: pointer;
+    background-color: #d6ad60
+}
+header > a > img , footer > img {
+    width: 15rem;
+}
+
+body {
+    background-color: #121212;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d6ad60
+}
+
+.catalogFeed__itemCard{
+    gap: 0.4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalogFeed__itemCard__name{
+    color: #d6ad60;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.catalogFeed__itemCard__priceWeight, .catalogFeed__itemCard__opinion {
+    color: #999999
+}

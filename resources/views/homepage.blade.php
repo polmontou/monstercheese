@@ -7,7 +7,6 @@
     <title>Homepage</title>
 </head>
 <body>
-    @include('header')
     <main>
         <div>
             <img src="{{asset('images/plateauFromage.jpeg')}}" alt="plateau de fromage">

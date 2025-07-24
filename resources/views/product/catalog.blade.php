@@ -9,6 +9,8 @@
 <body>
     @include('header')
 
+<a href="{{ asset='' }}"></a>
+
     <main>
         <h1>Nos produits</h1>
         <div class="catalogFeed">

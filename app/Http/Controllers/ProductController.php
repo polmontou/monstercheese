@@ -14,6 +14,11 @@ class ProductController extends Controller
         $productOrderAlph = Product::orderBy('name','desc')->get();
         $productOrderPrice = Product::orderBy('price')->get();
         $product = Product::where('id', '=', $productId)->get();
-        return view('/products.product-show', ['products' => $products, 'product' => $product,'productOrderAlph'=>$productOrderAlph,'productOrderPrice'=>$productOrderPrice]);
+        return view('/products.product-show', 
+            ['products' => $products, 
+            'product' => $product,
+            'productOrderAlph'=>$productOrderAlph,
+            'productOrderPrice'=>$productOrderPrice
+        ]);
     }
 }

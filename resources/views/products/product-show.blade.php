@@ -10,7 +10,8 @@
 
 @section('content')
 <main>
-    {{var_dump($product[0]->name)}}
+    <!--     <pre>{{var_dump($product)}}</pre>
+ -->
     <section>
         <h1>{{$product[0]->name}}</h1>
         <img src={{ asset($product[0]->picture) }} alt="Image {{$product[0]->name}}">
@@ -56,9 +57,16 @@
             <button>S'abonner</button>
         </form>
     </section>
-
     <section>
         <h2>Nos autres produits</h2>
+        <button onclick="displayProducts()">All product</button>
+        <button onclick="displayProductsOrderAlpha()">Products Alphabetically</button>
+        <button onclick="displayProductsOrderPrice()">Products Price</button>
+
+
+
+    </section>
+    <section id="allProducts" class="hidden">
         <div class="sectionOther">
             @foreach ($products as $productAlone)
             @if ($product[0]->id !== $productAlone->id)
@@ -74,7 +82,41 @@
             @endforeach
         </div>
     </section>
+    <section id="productsPrice" class="hidden">
+        <div class="sectionOther">
+            @foreach ($productOrderPrice as $productOrderP)
+            @if ($product[0]->id !== $productOrderP->id)
+            <div class="otherProducts">
+                <img src={{ asset($productOrderP->picture) }}>
+                <div>
+                    <p>{{$productOrderP->name}}</p>
+                    <p>{{$productOrderP->price}} €</p>
+                    <a href={{ url("/product/$productOrderP->id") }}>+ d'infos</a>
+                </div>
+            </div>
+            @endif
+            @endforeach
+        </div>
+    </section>
+
 </main>
+<script>
+    function displayProducts() {
+        const element = document.getElementById("allProducts");
+        element.style.display = (element.style.display === "none") ? "block" : "none";
+    }
+
+    function displayProductsOrderAlpha() {
+        const element = document.getElementById("productsAlpha");
+        element.style.display = (element.style.display === "none") ? "block" : "none";
+    }
+
+    function displayProductsOrderPrice() {
+        const element = document.getElementById("productsPrice");
+        element.style.display = (element.style.display === "none") ? "block" : "none";
+    }
+</script>
+
 
 
 @endsection

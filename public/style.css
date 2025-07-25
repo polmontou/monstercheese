@@ -76,3 +76,7 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.hidden{
+    display:none;
+}

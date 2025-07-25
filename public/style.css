@@ -58,3 +58,21 @@ p{
 .catalogFeed__itemCard__price, .catalogFeed__itemCard__weight, .catalogFeed__itemCard__opinion {
     color: #999999
 }
+
+.otherProducts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin:1rem 0;    
+}
+
+.otherProducts img{
+    width: 10rem;
+    margin:0 2rem;
+}
+
+.sectionOther{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

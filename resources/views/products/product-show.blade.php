@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$product_name}}</title>
+    <title>{{$product[0]->name}}</title>
 </head>
 
 
@@ -61,6 +61,7 @@
         <h2>Nos autres produits</h2>
         <div class="sectionOther">
             @foreach ($products as $productAlone)
+            @if ($product[0]->id !== $productAlone->id)
             <div class="otherProducts">
                 <img src={{ asset($productAlone->picture) }}>
                 <div>
@@ -69,6 +70,7 @@
                     <a href={{ url("/product/$productAlone->id") }}>+ d'infos</a>
                 </div>
             </div>
+            @endif
             @endforeach
         </div>
     </section>

@@ -82,9 +82,25 @@
             @endforeach
         </div>
     </section>
+        <section id="productsAlpha" class="hidden">
+        <div class="sectionOther">
+            @foreach ($productsOrderAlph as $productOrderA)
+            @if ($product[0]->id !== $productOrderA->id)
+            <div class="otherProducts">
+                <img src={{ asset($productOrderA->picture) }}>
+                <div>
+                    <p>{{$productOrderA->name}}</p>
+                    <p>{{$productOrderA->price}} €</p>
+                    <a href={{ url("/product/$productOrderA->id") }}>+ d'infos</a>
+                </div>
+            </div>
+            @endif
+            @endforeach
+        </div>
+
     <section id="productsPrice" class="hidden">
         <div class="sectionOther">
-            @foreach ($productOrderPrice as $productOrderP)
+            @foreach ($productsOrderPrice as $productOrderP)
             @if ($product[0]->id !== $productOrderP->id)
             <div class="otherProducts">
                 <img src={{ asset($productOrderP->picture) }}>

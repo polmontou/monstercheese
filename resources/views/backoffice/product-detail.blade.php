@@ -7,8 +7,6 @@
     <title>Admin {{$product[0]->name}}</title>
 </head>
 
-
-
 <main>
 @section('content')
     <section>

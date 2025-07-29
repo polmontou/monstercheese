@@ -26,9 +26,13 @@ class BackendController extends Controller
         ]);  
     }
 
-    public function RemoveProduct(string $productToRemove)
+    /*public function updateProduct(){
+        $updated_product=
+    }*/
+
+    /*public function RemoveProduct(string $productToRemove)
     {
         $removeProduct = Product::where('name', '=', $productToRemove);
         return view('backoffice',['removeProduct'=>$removeProduct]);
-    }
+    }*/
 }

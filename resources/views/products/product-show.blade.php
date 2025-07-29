@@ -1,20 +1,20 @@
 @extends('components.layout')
 
 
-@section('page_title', $product[0]->name)
+@section('page_title', $product->name)
 
 
 @section('content')
     <main>
         <section>
-            <h1>{{$product[0]->name}}</h1>
-            <img src={{ asset($product[0]->picture) }} alt="Image Fromage">
-            <p>Prix : {{$product[0]->price}},00€ TTC</p>
+            <h1>{{$product->name}}</h1>
+            <img src={{ asset($product->picture) }} alt="Image Fromage">
+            <p>Prix : {{number_format($product->price, 2, ",", " ")}}€ TTC</p>
             <div>
                 <p>Quantité</p>
                 <button>AJouter au panier</button>
             </div>
-            <p>{{$product[0]->description}}</p>
+            <p>{{$product->description}}</p>
             <div>
                 <div>
                     <h1>Ingrédients</h1>

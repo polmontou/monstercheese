@@ -28,7 +28,7 @@ footer {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 h1,h2,h3{
@@ -58,4 +58,88 @@ p{
 }
 .catalogFeed__itemCard__price, .catalogFeed__itemCard__weight, .catalogFeed__itemCard__opinion {
     color: #999999
+}
+
+.main__TableProducts, table, th, td{
+    border: 1px solid #444;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.main__TableProducts {
+    margin: 3rem ;
+    margin-top: 0; 
+}
+.main__TableProducts--header, .productTable__BO--title {
+    background-color: #d6ad60;
+    font-weight: bold;
+} 
+
+.main__TableProducts--products, .productTable__BO--content {
+    color: white
+}
+
+.productEditor__main, .productCreator__main, .bOProduct__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.productEditor__form__input>label, .productCreator__form__input>label  {
+    color: white;
+}
+.productEditor__form__input, .productCreator__form__input{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+
+}
+
+button,
+input[type="submit"] {
+    background-color: #D6AD60;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #B8934F;
+}
+
+.alert{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #d6ad609c;
+}
+
+.main__TableProducts--links {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.main__TableProducts--links>button>a>img, .main__TableProducts--links>form>button>img {
+    width: 2rem;
+}
+
+.backOffice__main>button {
+    margin: 2rem;
+}
+
+.backOffice__main__button--newProduct{
+    display: flex;
+    justify-content: space-around;
 }

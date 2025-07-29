@@ -11,7 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema ::create('products', function (Blueprint $table){
+            $table->id();
+            $table->string('name');
+            $table->longText('description');
+            $table->float('price');
+            $table->integer('weight');
+            $table->string('picture');
+            $table->integer('stock_available');
+            $table->integer('category');
+            $table->boolean('available');
+        });
     }
 
     /**

@@ -11,4 +11,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'show']);
 Route::get('/product/{productId}', [ProductController::class,'show']);
 Route::get('/products', [CatalogController::class, 'displayCatalog']);
-Route::get('/backoffice', [BackendController::class, 'productAdmin']);
+Route::get('/backoffice', [BackendController::class, 'displayBackoffice']);
+Route::get('/backoffice/products', [BackendController::class, 'showAllProducts']);
+Route::get('/backoffice/product/{idProduct}',[BackendController::class, 'showProduct']);

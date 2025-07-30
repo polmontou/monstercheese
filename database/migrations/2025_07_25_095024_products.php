@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('stock_available');
             $table->integer('category');
             $table->boolean('available');
+
+            $table->timestamps();
         });
     }
 

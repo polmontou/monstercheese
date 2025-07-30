@@ -3,7 +3,7 @@
 
 
 @section('content')
-<form method='POST' action='/backoffice/product/{$product[0]->id}/edited'>
+<form method="POST" action="{{ url('/backoffice/product/' . $product[0]->id . '/edited') }}">
     @csrf
     @method('post')
     <div class="shortFormArea">

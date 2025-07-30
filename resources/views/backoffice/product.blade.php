@@ -20,7 +20,7 @@
             <th class= "productTable__BO--title">Quantité en stock: </th><td class= "productTable__BO--content">{{$product->stock_quantity}}</td>
         </tr>
         <tr>
-            <th class= "productTable__BO--title">Catégorie: </th><td class= "productTable__BO--content">{{$product->category}}</td>
+            <th class= "productTable__BO--title">Catégorie: </th><td class= "productTable__BO--content">{{$product->category_id}}</td>
         </tr>
         <tr>
             <th class= "productTable__BO--title">Disponible: </th><td class= "productTable__BO--content">{{$product->available}}</td>    

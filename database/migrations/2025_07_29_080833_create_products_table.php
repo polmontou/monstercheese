@@ -11,14 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::dropIfExists('products');
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name');
             $table->text('description');
             $table->float('price');
             $table->integer('weight');
-            
-            $table->timestamps();
+            $table->string('picture');
+            $table->integer('stock_quantity');
+            $table->integer('category_id');
+            $table->boolean('available');
         });
     }
 

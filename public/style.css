@@ -143,3 +143,14 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: space-around;
 }
+
+.error__displayer {
+    background-color: #ff8f8fe0;
+    padding: 1rem;
+    padding-left: 2rem;
+    border-radius: 1rem;;
+}
+
+.error__displayer>ul>li{
+    color: rgb(201, 7, 7);
+}

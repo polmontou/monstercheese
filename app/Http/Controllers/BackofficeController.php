@@ -31,18 +31,18 @@ class BackofficeController extends Controller
     }
 
     public function updateProduct(Request $request, int $id): RedirectResponse {
-
+        
         $validated = $request->validate([
             'name'=>'required',
-            'description'=>'required',
-            'price'=>'required|numeric',
+            'description'=>'required|string',
+            'price'=>'required|numeric|min:1',
             'weight'=>'required|int',
             'picture'=>'required',
             'stock_quantity'=>'required|int',
-            'category'=>'required',
-            'available'=>'required'
+            'category_id'=>'required',
+            'available'=>'required|boolean'
         ]);
-    
+
         Product::findOrFail($id)->update($validated);
         
         return redirect()->route('backoffice.products')->with('updated', "Votre produit a bien été mis à jour!");
@@ -58,14 +58,25 @@ class BackofficeController extends Controller
 
     public function createProduct(Request $request): RedirectResponse{
         $validated = $request->validate([
-            'name'=>'required',
+            'name'=>'required|string|unique:products,name',
             'description'=>'required',
-            'price'=>'required|numeric',
+            'price'=>'required|numeric|min:1',
             'weight'=>'required|int',
             'picture'=>'required',
-            'stock_quantity'=>'required|int',
-            'category'=>'required',
-            'available'=>'required'
+            'stock_quantity'=>'required|int|unique:products,picture',
+            'category_id'=>'required',
+            'available'=>'required|boolean'
+        ], [
+            'name.required'=>'Vous devez donner un nom à votre fromage!',
+            'name.unique'=>'Ce fromage existe déjà!',
+            'description.required'=>'Vous devez spécifier la description du fromage',
+            'price.required'=>'Vous devez spécifier un prix',
+            'price.min'=>'Tu veux pas gagner de sous toi',
+            'weight'=>'Vous devez spécifier un poids',
+            'picture'=>'Vous devez spécifier un chemin vers votre image',
+            'stock_quantity'=> 'Vous devez spécifier une quantité valide',
+            'category_id'=>'Vous devez spécifier une catégory valide',
+            'available'=>'Vous devez spécifier si le produit est disponible'
         ]);
         Product::create($validated);
 

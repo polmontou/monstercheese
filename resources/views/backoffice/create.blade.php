@@ -36,8 +36,8 @@
             <input type="number" class="form-control" name="stock_quantity" id="stock_quantity" min ="0" max="500000">
         </div>
         <div class="productCreator__form__input">
-            <label for="category" class="">Catégorie :</label>
-            <input type="number" class="form-control" name="category" id="category" min ="1" max="5">
+            <label for="category_id" class="">Catégorie :</label>
+            <input type="number" class="form-control" name="category_id" id="category_id" min ="1" max="5">
         </div>
         <div class="productCreator__form__input">
             <p>Disponible :</p>
@@ -49,6 +49,17 @@
         <div class="productCreator__form__input">
             <input type="submit" name="update_delete" value="Créer le produit">
         </div>
+
+        @if ($errors->any())
+        <div class="error__displayer">
+        <ul>
+            @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+        </div>
+        @endif
+
     </form>
 </main>
 @endsection

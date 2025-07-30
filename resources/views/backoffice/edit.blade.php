@@ -37,8 +37,8 @@
             <input type="number" class="form-control" name="stock_quantity" id="stock_quantity" min ="0" max="500000" value="{{ $product->stock_quantity }}">
         </div>
         <div class="productEditor__form__input">
-            <label for="category" class="">Catégorie :</label>
-            <input type="number" class="form-control" name="category" id="category" min ="1" max="5" value="{{ $product->category }}">
+            <label for="category_id" class="">Catégorie :</label>
+            <input type="number" class="form-control" name="category_id" id="category_id" min ="1" max="5" value="{{ $product->category }}">
         </div>
         <div class="productEditor__form__input">
             <p>Disponible :</p>

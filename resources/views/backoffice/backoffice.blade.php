@@ -55,7 +55,7 @@
                 <td>{{$product->weight}}</td>
                 <td>{{$product->picture}}</td>
                 <td>{{$product->stock_quantity}}</td>
-                <td>{{$product->category}}</td>
+                <td>{{$product->category_id}}</td>
                 <td>{{$product->available}}</td>
                 <td class="main__TableProducts--links">
                     <button><a href="{{ url("/backoffice/product/$product->id") }} "><img src="{{asset('images/loupe.png')}}" alt="Show product's details"></a></button>

@@ -1,12 +1,6 @@
 @extends('components/layout')
 @section('page_title',$product[0]->name)
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$product[0]->name}}</title>
-</head>
-
 
 @section('content')
 <main>

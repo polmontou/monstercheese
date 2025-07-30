@@ -1,11 +1,5 @@
 @extends('components/layout')
-@section('page_title','Admin')
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin {{$product[0]->name}}</title>
-</head>
+@section('page_title','Admin '. $product[0]->name)
 
 <main>
 @section('content')

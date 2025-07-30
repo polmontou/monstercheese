@@ -81,6 +81,7 @@ p{
     display:none;
 }
 
+/*Table*/
 table{
     background-color: #d6ad60;
     margin: 2rem;
@@ -109,4 +110,35 @@ table tr{
 
 a{
     color: white;
+}
+
+/*Form*/
+form{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin: 3rem auto;
+}
+form div{
+    display: flex;
+    flex-direction:column;
+    margin:0.5rem 0;
+}
+.shortFormArea{
+    width:25%;
+}
+form label{
+    color:white
+}
+.available{
+    display: flex;
+    flex-direction: row;
+}
+.radioButton{
+    display: flex;
+    flex-direction: row;
+    width: 5rem;
+}
+.radioButton label{
+    margin-right: 0.5rem;
 }

@@ -26,9 +26,26 @@ class BackendController extends Controller
         ]);  
     }
 
-    /*public function updateProduct(){
-        $updated_product=
-    }*/
+    public function updateProduct(Request $request, int $idProduct){
+        $product=Product::where('id','=', $idProduct)->get();
+        $validated=[
+            'name'=>'required',
+            'description'=>'required',
+            'price'=>'required|numeric',
+            'weight'=>'required|int',
+            'picture'=>'required',
+            'stock_quantity'=>'required|int',
+            'category'=>'required',
+            'available'=>'required'
+        ];
+
+        Product::findOrFail($idProduct)->update($validated);
+
+        return redirect()->route('backoffice/product-detail')->with('updated','Produit mis à jour');
+        //return view("/backoffice/product-edit", [
+        //    'product'=>$product,
+       // ]);
+    }
 
     /*public function RemoveProduct(string $productToRemove)
     {

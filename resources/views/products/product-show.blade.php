@@ -1,17 +1,17 @@
 @extends('components.layout')
 
 
-@section('page_title', $product_name)
+@section('page_title', $page_title)
 
 
 @section('content')
     <main>
         <section>
-            <h1>{{$product_name}}</h1>
-            <img src="/images/cheese.png" alt="Image Fromage">
-            <p>Prix au kg</p>
+            <h1>{{$product[0]->name}}</h1>
+            <img src={{ asset("$product[0]->picture") }} alt="Image Fromage">
+            <p>{{ $product[0]->price}} €</p>
             <div>
-                <p>Quantité</p>
+                <p> {{ $product[0]->stock_quantity }} </p>
                 <button>AJouter au panier</button>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra maximus augue. Vivamus venenatis odio quis ligula consequat, et imperdiet nisl dignissim. Donec eu orci aliquet, hendrerit metus ac, imperdiet nulla. Vivamus venenatis odio quis ligula consequat, et imperdiet nisl dignissim. Donec eu orci aliquet, hendrerit metus ac, imperdiet nulla. </p>
@@ -42,6 +42,7 @@
                 </div>
             </div>
         </section>
+            
         <section>
 
             <x-customer-review/>

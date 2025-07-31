@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Order;
+use App\Models\ProductOrder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -82,4 +84,10 @@ class BackofficeController extends Controller
 
         return redirect()->route("backoffice.products")->with("added","Votre produit a bien été ajouté!");
     }
+
+        public function displayOrders(){
+            $orders = Order::with('products')->get();
+
+            return view('backoffice.orders', ['orders'=>$orders]);
+        }
 }

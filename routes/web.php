@@ -4,6 +4,7 @@ use App\Http\Controllers\BackofficeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,6 +20,9 @@ Route::prefix('/backoffice')->controller(BackofficeController::class)->group(fun
     Route::get('/product/{id}/edit', 'displayProductEditor');
     Route::post('/product/{id}/edited', "updateProduct");
     Route::delete('/product/{id}/deleted', "deleteProduct");  
-    });
-
+    Route::get('/orders', 'displayOrders');    
+});
+Route::controller(UserController::class)->group(function (){
+    Route::get('/connect', 'displayConnection');
+});
 

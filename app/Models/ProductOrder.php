@@ -3,22 +3,24 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\Product;
+use App\Models\Order;
 
 class ProductOrder extends Model
 {
     public $timestamps = false;
-    protected $primaryKey = "product_orders_id";
+    protected $primaryKey = "id";
     protected $fillable = [
         'order_id',
         'product_id',
         'quantity'
     ];
-    public function product(): HasOne {
-        return $this->hasOne(Product::class,"id","product_id");     
-    }
-    public function order(): HasOne {
-        return $this->hasOne(Order::class,"id","order_id");
+    // public function product(): belongsTo {
+    //     return $this->belongsTo(Product::class);     
+    // }
+    // public function order(): BelongsTo {
+    //     return $this->belongsTo(Order::class);
 
-    }
+    // }
 }

@@ -1,14 +1,14 @@
 <?php
 
 namespace Database\Seeders;
-use illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
-class ProductSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('cheeses')->insert([
+        DB::table('products')->insert([
             [
                 'name' => 'Larmes de Troll',
                 'description' => 'Fromage crémeux adoucissant fabriqué avec du lait de vaches géantes des marais et saumure de troll pétrifié.',
@@ -108,6 +108,67 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 4,
                 'category_id' => 4,
                 'available' => 1,
+            ],
+        ]);
+        DB::table("users")->insert([
+            [
+                'name'=>'Paul',
+                'email'=>'paul.montoussy@gmail.com',
+                'email_verified_at'=> null,
+                'password'=> "123"
+            ]
+        ]);
+        DB::table("orders")->insert([
+            ["id"=>1,
+            'user_id'=>1],
+            ["id"=>2,
+            'user_id'=>1],
+            ["id"=>3,
+            'user_id'=>1],
+            ["id"=>4,
+            'user_id'=>1]
+        ]);
+        DB::table("order_product")->insert([
+            [
+                "order_id" => 1,
+                "product_id" => 1,
+                "quantity" => 4
+            ],[
+                "order_id" => 1,
+                "product_id" => 3,
+                "quantity" => 1
+            ],[
+                "order_id" => 1,
+                "product_id" => 9,
+                "quantity" => 2
+            ],[
+                "order_id" => 2,
+                "product_id" => 6,
+                "quantity" => 8
+            ],[
+                "order_id" => 3,
+                "product_id" => 3,
+                "quantity" => 4
+            ],[
+                "order_id" => 3,
+                "product_id" => 10,
+                "quantity" => 2
+            ],[
+                "order_id" => 4,
+                "product_id" => 6,
+                "quantity" => 4
+            ],[
+                "order_id" => 4,
+                "product_id" => 2,
+                "quantity" => 4
+            ],[
+                "order_id" => 4,
+                "product_id" => 8,
+                "quantity" => 4
+            ],[
+                "order_id" => 4,
+                "product_id" => 5,
+                "quantity" => 4
             ],
         ]);
     }

@@ -17,6 +17,7 @@
             <a href="{{ url('/') }}">Accueil</a>
             <a href="{{ url('/products') }}">Nos produits</a>
             <a href="{{ url('/backoffice/products') }}">Administration</a>
+            <a href="{{ url('/cart') }}">Mon panier</a>
         </nav>
     </header>
 

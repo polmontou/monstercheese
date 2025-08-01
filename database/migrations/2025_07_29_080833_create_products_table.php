@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('weight');
             $table->string('picture');
             $table->integer('stock_quantity');
+            $table->integer('order_quantity')->default(0);
             $table->integer('category_id');
             $table->boolean('available');
         });

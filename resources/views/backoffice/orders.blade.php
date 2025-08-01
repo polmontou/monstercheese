@@ -31,7 +31,7 @@
                 @endforeach
             <tr>
                 <td colspan="3" style="text-align: right; background-color: #d6ad605e;">Total :</td>
-                <td style="background-color: #bebebe">{{number_format($total,'2',',')." €"}}</td>
+                <td style="background-color: #bebebe5e">{{number_format($total,'2',',')." €"}}</td>
             </tr>
         </tbody>
 

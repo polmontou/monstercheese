@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse; 
 
 class BackendController extends Controller
 {
@@ -33,13 +34,13 @@ class BackendController extends Controller
         ]);  
     }
 
-    public function updateProduct(Request $request, int $idProduct){
+    public function updateProduct(Request $request, int $idProduct): RedirectResponse {
         $validated=$request->validate([
             'name'=>'required',
             'description'=>'required',
             'price'=>'required|numeric',
             'weight'=>'required|int',
-            'picture'=>'required',
+            'picture',
             'stock_quantity'=>'required|int',
             'category'=>'required',
             'available'=>'required'
@@ -47,7 +48,8 @@ class BackendController extends Controller
 
         Product::findOrFail($idProduct)->update($validated);
 
-        return redirect()->route('backoffice/product-edit')->with('updated','Produit mis à jour');
+        return redirect()->route('backoffice.products')->with('updated', 'Produit mis à jour');
+
     }
 
     /*public function RemoveProduct(string $productToRemove)

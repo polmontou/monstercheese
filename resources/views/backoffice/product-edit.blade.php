@@ -31,8 +31,8 @@
         <input type='image' id='picture' name='picture' src='{{asset($product[0]->picture)}}'>
     </div>
     <div class="shortFormArea">
-        <label for='stock'>Stock available</label>
-        <input type='number' id='stock' name='stock' value='{{$product[0]->stock}}'>
+        <label for='stock_quantity'>Stock available</label>
+        <input type='number' id='stock_quantity' name='stock_quantity' value='{{$product[0]->stock}}'>
     </div>
     <div class="shortFormArea">
         <label for='category'>Category</label>
@@ -51,7 +51,14 @@
             </div>
         </div> 
     </div>
-    <input type='submit' value='Sauvegarder les modifs'>
+    <input type='submit' name="update_product" value='Sauvegarder les modifs'>
+    @if ($errors->any())
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
 
 </form>
 

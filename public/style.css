@@ -142,3 +142,9 @@ form label{
 .radioButton label{
     margin-right: 0.5rem;
 }
+
+/*User*/
+.listUser{
+    color: white;
+    margin: 1rem;
+}

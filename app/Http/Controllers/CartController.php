@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Order;
+use App\Models\OrderProduct;
 use Mockery\Generator\StringManipulation\Pass\Pass;
 
 class CartController extends Controller
@@ -22,7 +24,6 @@ class CartController extends Controller
         $request->session()->put('cart',$cart); 
         return redirect()->route('catalog')->with('success', 'Votre produit a bien été ajouté au panier!');
     }
-
     public function updateCart(Request $request): RedirectResponse {
         $cart=$request->session()->get('cart');
         if ($request->updateDelete == "update") {
@@ -34,12 +35,29 @@ class CartController extends Controller
                     }  
                 }
             }
+            $message = "Votre panier a bien été modifié.";
         } else if ($request->updateDelete == "delete"){
             foreach($cart as $key => $value) {
                 unset($cart[$key]);
             }
+            $message = "Votre panier a bien été vidé.";
+        } else if ($request->updateDelete == "validate") {
+            $current_order = Order::create(["user_id"=>1] );
+            foreach($cart as $key => $value) {
+                OrderProduct::create(["order_id"=>$current_order->id,"product_id"=>$key, "quantity"=>$value->order_quantity]);
+                $product = Product::findOrFail($key);
+                $product->stock_quantity = $value->stock_quantity - $value->order_quantity;
+                $product->save();
+            }
+            foreach($cart as $key => $value) {
+                unset($cart[$key]);
+            }
+            $message = "Votre panier a bien été validé.";
         } 
+
         $request->session()->put('cart',$cart);
-        return redirect()->route('cart')->with('updated','Votre panièr a été mis à jour');
-    }    
+        return redirect()->route('cart.cart')->with("edit", $message);
+    }
+    
+
 }

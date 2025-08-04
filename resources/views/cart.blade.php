@@ -4,7 +4,11 @@
 
 @section('content')
 <h1>Votre panier</h1>
-
+@if(session('edit'))
+<div class="alert alert-success">
+            {{ session('edit') }}
+        </div>
+@endif
 @if(session('cart'))
 <form action="{{ url('/cart/update-cart') }}" method="POST">
     @csrf
@@ -37,6 +41,7 @@
     <div style="display:flex; gap: 4rem; margin: 2rem">
         <button type="submit" name="updateDelete" value="update">Mettre à jour mon panier</button>
         <button type="submit" name="updateDelete" value="delete">Vider mon panier</button>
+        <button type="submit" name="updateDelete" value="validate">Valider mon panier</button>
     </div>
 </form>
 @else

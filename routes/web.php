@@ -24,7 +24,7 @@ Route::prefix('/backoffice')->controller(BackofficeController::class)->group(fun
     Route::get('/orders', 'displayOrders');    
 });
 Route::controller(CartController::class)->group(function (){
-    Route::get('/cart','displayCart')->name('cart');
+    Route::get('/cart','displayCart')->name('cart.cart');
     Route::post('/cart/add-to-cart', 'addToCart')->name('cart.addToCart');
     Route::post('cart/update-cart','updateCart');
 });

@@ -12,6 +12,9 @@ class Order extends Model
 {
     public $timestamps = false;
     protected $primaryKey = "id";
+    protected $fillable = [
+        "user_id"
+    ];
     
     public function products(): BelongsToMany 
     {

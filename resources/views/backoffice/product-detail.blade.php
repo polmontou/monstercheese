@@ -27,12 +27,14 @@
                 <td>{{$product[0]->weight}}</td>
                 <td><img src={{asset($product[0]->picture)}}>
                 </td>
-                <td>{{$product[0]->stock}}</td>
+                <td>{{$product[0]->stock_quantity}}</td>
                 <td>{{$product[0]->category}}</td>
                 <td>{{$product[0]->available}}</td>
                 </tr>
             </tbody>
         </table>
+        <a href='{{ url("/backoffice/product/{$product[0]->id}/edit") }}'>Modifier le produit</a>
+        <a href='{{ url("/backoffice/product/{$product[0]->id}/delete") }}'>Supprimer ce produit</a>
 
     </section>
     @endsection

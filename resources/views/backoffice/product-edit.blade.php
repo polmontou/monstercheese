@@ -32,7 +32,7 @@
     </div>
     <div class="shortFormArea">
         <label for='stock_quantity'>Stock available</label>
-        <input type='number' id='stock_quantity' name='stock_quantity' value='{{$product[0]->stock}}'>
+        <input type='number' id='stock_quantity' name='stock_quantity' value='{{$product[0]->stock_quantity}}'>
     </div>
     <div class="shortFormArea">
         <label for='category'>Category</label>
@@ -52,14 +52,6 @@
         </div> 
     </div>
     <input type='submit' name="update_product" value='Sauvegarder les modifs'>
-    @if ($errors->any())
-    <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-@endif
-
 </form>
 
 

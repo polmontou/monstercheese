@@ -5,6 +5,8 @@
 <main>
    <h1>Page d'administration des produits</h1>
 
+   <a href='{{url("/backoffice/products/new")}}'>Créer un produit</a>
+
         <table>
         <thead>
             <tr>
@@ -29,10 +31,10 @@
             <td>{{$product->price}}</td>
             <td>{{$product->weight}}</td>
             <td>{{$product->picture}}</td>
-            <td>{{$product->stock}}</td>
+            <td>{{$product->stock_quantity}}</td>
             <td>{{$product->category}}</td>
             <td>{{$product->available}}</td>
-            <td><a href='{{url("/backoffice/product/{$product->id}")}}'>Acces</a>
+            <td><a href='{{url("/backoffice/product/{$product->id}")}}'>Access</a>
             </tr>
             @endforeach  
         </tbody>

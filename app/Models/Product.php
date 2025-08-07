@@ -19,6 +19,6 @@ class Product extends Model
 
     public function products():BelongsToMany
     {
-        return $this->belongsToMany(Cart::class);
+        return $this->belongsToMany(Categorie::class);
     }
 }

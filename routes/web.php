@@ -26,3 +26,5 @@ Route::post('/backoffice/products/created',[BackendController::class,'create']);
 
 /*Route User*/
 Route::get('/user', [UserController::class,'showAll']);
+
+Route::get('/backoffice/categories',[BackendController::class, 'showCategory']);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -82,6 +83,15 @@ class BackendController extends Controller
     {
         Product::where('id', '=', $idProduct)->delete();
         return redirect()->route('backoffice.products')->with('deleted', 'Produit supprimé');
+    }
+
+
+    public function showCategory(){
+
+        $categories=Categorie::with('products')->get();
+        return view('/backoffice/categories',[
+            'categories'=>$categories,
+        ]);
     }
 
 }

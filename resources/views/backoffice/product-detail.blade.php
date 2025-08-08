@@ -19,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr>categories
                 <td>{{$product[0]->id}}</td>
                 <td>{{$product[0]->name}}</td>
                 <td>{{$product[0]->description}}</td>
@@ -28,7 +28,9 @@
                 <td><img src={{asset($product[0]->picture)}}>
                 </td>
                 <td>{{$product[0]->stock_quantity}}</td>
-                <td>{{$product[0]->category}}</td>
+<!--                 <td>{{$product[0]->category}}</td>
+ -->               
+                <td>{{$categorie->title}}
                 <td>{{$product[0]->available}}</td>
                 </tr>
             </tbody>

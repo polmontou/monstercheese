@@ -89,9 +89,7 @@ class BackendController extends Controller
     public function showCategory(){
 
         $categories=Categorie::with('products')->get();
-        return view('/backoffice/categories',[
-            'categories'=>$categories,
-        ]);
+        return view('/backoffice/categories',compact('categories'));
     }
 
 }

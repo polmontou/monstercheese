@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('weight');
             $table->string('picture');
             $table->integer('stock_available');
-            $table->integer('category');
+            $table->foreignId('categorie_id');
             $table->boolean('available');
 
             $table->timestamps();
